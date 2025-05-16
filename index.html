@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mantón Bar de Copas</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/x-icon" href="assets/webp/favicon2.ico">
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="https://kit.fontawesome.com/b408879b64.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+        <nav>
+            <div class="logo">
+                <a href=""><img src="assets/webp/logo modificado.webp" alt="logo-manton"></a>
+            </div>
+            <div class="toggle">
+                <a href="#"><ion-icon name="menu"></ion-icon></a>
+            </div>
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Sobre nosotros</a></li>
+                <li><a href="#">Galería</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <!--MENU DESPEGABLE-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        
+        <script>
+
+            $(function(){
+                $(".toggle").on("click", function(){
+                    if($(".menu").hasClass("active")){
+                        $(".menu").removeClass("active");
+                        $(this).find("a").html("<ion-icon name='menu'></ion-icon>");
+                    } else{
+                        $(".menu").addClass("active");
+                        $(this).find("a").html("<ion-icon name='close'></ion-icon>");
+                    }
+                });
+            });
+
+        </script>
+        </div>
+
+    </header>
+    <!--secciones de la pág de inicio-->
+        <!--hero-->
+        <section id="hero">
+            <img src="assets/webp/logo 1000px.webp" alt="logo-manton">
+        </section>
+
+        <section id="somos-manton">
+            <div class="container">
+                <div class="img-container"></div>
+                <div class="text">
+                    <h2>Somos <span class="brand">MANTÓN</span></h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maxime ipsam perferendis, corporis perspiciatis repellendus, porro aliquid dolorem eaque dolor facilis libero, velit at ipsa? Eaque, iste rerum? Culpa, enim deleniti!</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="bar-de-copas">
+            <div class="container">
+                <div class="text-bar">
+                    <h1>BAR DE COPAS</h1>
+                    <p>Ven y disfruta de una experiencia única</p>
+                </div>
+                <img src="assets/webp/abanicofinal.webp" alt="abanico-asset">
+            </div>
+        </section>
+
+        <!--CARRUSEL-->
+        <section id="gallery">
+            <div class="container">
+                 <div class="title-gallery">
+                    <img src="assets/webp/destello izq rojo.webp" alt="icono izquierda">
+                    <h2>Galería de fotos</h2>
+                    <img src="assets/webp/destello der rojo.webp" alt="icono derecha">
+                </div>
+                    <!---carrusel escritorio-->
+                    <div id="carousel">
+                    <figure id="spinner">
+                        <img src="assets/webp/grupo-de-gente-bailando-en-discoteca.webp" alt="Imagen 1">
+                        <img src="assets/webp/grupo-de-gente-bailando-en-discoteca.webp" alt="Imagen 2">
+                        <img src="assets/webp/grupo-de-gente-bailando-en-discoteca.webp" alt="Imagen 3">
+                        <img src="assets/webp/grupo-de-gente-bailando-en-discoteca.webp" alt="Imagen 4">
+                        <img src="assets/webp/grupo-de-gente-bailando-en-discoteca.webp" alt="Imagen 5">
+                        <img src="assets/webp/grupo-de-gente-bailando-en-discoteca.webp" alt="Imagen 6">
+                        <img src="assets/webp/grupo-de-gente-bailando-en-discoteca.webp" alt="Imagen 7">
+                        <img src="assets/webp/grupo-de-gente-bailando-en-discoteca.webp" alt="Imagen 8">
+                    </figure>
+                    </div>
+
+                    <!-- Botones -->
+                    <div class="controls">
+                        <span onclick="galleryspin('-')">&#10094;</span>
+                        <span onclick="galleryspin('')">&#10095;</span>
+                    </div>
+                    
+                    <!--carrusel para móviles-->
+
+                    <div id="carousel-scroll">
+                        <div class="scroll-wrapper">
+                            <img src="assets/webp/grupo-de-gente-bailando-en-discoteca.webp" alt="1">
+                            <img src="assets/webp/grupo-de-gente-bailando-en-discoteca.webp" alt="2">
+                            <img src="assets/webp/grupo-de-gente-bailando-en-discoteca.webp" alt="3">
+                            <img src="assets/webp/grupo-de-gente-bailando-en-discoteca.webp" alt="4">
+                            <img src="assets/webp/grupo-de-gente-bailando-en-discoteca.webp" alt="5">
+                            <img src="assets/webp/grupo-de-gente-bailando-en-discoteca.webp" alt="6">
+                            <img src="assets/webp/grupo-de-gente-bailando-en-discoteca.webp" alt="7">
+                            <img src="assets/webp/grupo-de-gente-bailando-en-discoteca.webp" alt="8">
+                        </div>
+                    </div>
+
+                <script>
+                    let angle = 0;
+                    function galleryspin(sign) {
+                        const spinner = document.querySelector("#spinner");
+                        if (!sign) {
+                        angle += 45;
+                        } else {
+                        angle -= 45;
+                        }
+                        spinner.style.transform = `rotateY(${angle}deg)`;
+                    }
+                </script>
+
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <!-- COLUMNA IZQUIERDA -->
+                <div class="box-info">
+                    <div class="text-form">
+                        <img src="assets/webp/destello izq rojo.webp" alt="icono izquierda">
+                        <h2>Contáctanos</h2>
+                        <img src="assets/webp/destello der rojo.webp" alt="icono derecha">
+                    </div>
+                    
+
+                    <div class="contact-info">
+                        <h5>-¿Cómo podemos ayudarle?-</h5>
+                        <img src="assets/webp/logo 300.webp" alt="Logo Manton">
+                        <p>¿Tienes alguna consulta sobre una reserva en nuestro bar?<br>
+                        Rellena el siguiente formulario y nos pondremos en contacto contigo lo antes posible.</p>
+                    </div>
+                </div>
+
+                <!-- COLUMNA DERECHA: FORMULARIO -->
+                <form class="contact-form">
+                <div class="input-box">
+                    <input type="text" required placeholder="Nombre y apellidos">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="input-box">
+                    <input type="email" required placeholder="Correo electrónico">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="input-box">
+                    <input type="text" required placeholder="Asunto">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                </div>
+                <div class="input-box">
+                    <textarea placeholder="Escribe tu mensaje..."></textarea>
+                </div>
+
+                <div class="checkboxes">
+                    <label><input type="checkbox" required> Acepto recibir comunicaciones comerciales por correo electrónico por parte de MANTÓN Bar de Copas (Puede darse de baja en cualquier momento)</label>
+                    <label><input type="checkbox" required> Declaro haber leido, comprendido y aceptado la política de privacidad.</label>
+                </div>
+
+                <button type="submit">Enviar mensaje</button>
+                </form>
+            </div>
+        </section>
+
+
+    <footer>
+        <div class="container">
+            <div class="footer-items">
+                <div class="img-footer">
+                    <img src="assets/webp/logo footer.webp" alt="logo manton">
+                </div>
+                <p>Ven y déjate llevar por el arte de la noche.</p>
+                <p>Te esperamos en MANTÓN.</p>
+                <img src="assets/webp/abanicofinal.webp" alt="abanico-asset">
+                <p>Calle San Juán de Letrán, 6.<br>29012 - Málaga Centro</p>
+                <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+            <div class="copy">
+                <p>Copyright&copy; 2025 Mantón - Bar de Copas</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
