@@ -10,6 +10,10 @@
     padding: 0;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 @font-face{ /*tipografia descargada*/
     font-family: 'Oswald';
     src: url('fonts/oswald/Oswald-Light.woff2') format('woff2'),
@@ -103,14 +107,14 @@ nav a:hover{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 110vh;
+    height: 90vh;
     /*fondo*/
     background-image: linear-gradient(
         0deg,
-        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.8),
         rgba(0, 0, 0, 0.5)
     )
-    ,url("assets/webp/grupo-de-gente-bailando-en-discoteca.webp");
+    ,url("assets/fotosLocalEditadas/portadamantón.edit.webp");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -118,10 +122,10 @@ nav a:hover{
 }
 
 #hero img{
-    max-width: 610px;
+    max-width: 520px;
     width: 100%;
     height: auto;
-    padding-bottom: 120px;
+    padding-bottom: 75px;
 }
 
 #somos-manton .container{
@@ -141,7 +145,12 @@ nav a:hover{
 }
 
 #somos-manton .img-container{
-    background-image: url("assets/webp/grupo-de-gente-bailando-en-discoteca.webp");
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.3)
+    )
+    ,url("assets/fotosLocalEditadas/6.edit.webp");
     background-size: cover;
     background-position: center center;
     height: 250px;
@@ -160,10 +169,10 @@ nav a:hover{
         rgba(0, 0, 0, 0.5),
         rgba(0, 0, 0, 0.5)
     )
-    ,url("assets/webp/grupo-de-gente-bailando-en-discoteca.webp");
+    ,url("assets/fotosLocalEditadas/9.editcolor.webp");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center center;
+    background-position: 40% 23%;
     clip-path: polygon(50% 20%, 70% 0, 100% 0, 100% 100%, 0 100%, 0 0, 30% 0);
 }
 
@@ -221,13 +230,15 @@ nav a:hover{
 }
 
 #spinner img:nth-child(1) { transform: rotateY(0deg); }
-#spinner img:nth-child(2) { transform: rotateY(-45deg); }
-#spinner img:nth-child(3) { transform: rotateY(-90deg); }
-#spinner img:nth-child(4) { transform: rotateY(-135deg); }
-#spinner img:nth-child(5) { transform: rotateY(-180deg); }
-#spinner img:nth-child(6) { transform: rotateY(-225deg); }
-#spinner img:nth-child(7) { transform: rotateY(-270deg); }
-#spinner img:nth-child(8) { transform: rotateY(-315deg); }
+#spinner img:nth-child(2) { transform: rotateY(-36deg); }
+#spinner img:nth-child(3) { transform: rotateY(-72deg); }
+#spinner img:nth-child(4) { transform: rotateY(-108deg); }
+#spinner img:nth-child(5) { transform: rotateY(-144deg); }
+#spinner img:nth-child(6) { transform: rotateY(-180deg); }
+#spinner img:nth-child(7) { transform: rotateY(-216deg); }
+#spinner img:nth-child(8) { transform: rotateY(-252deg); }
+#spinner img:nth-child(9) { transform: rotateY(-288deg); }
+#spinner img:nth-child(10) { transform: rotateY(-324deg); }
 
 .controls {
   text-align: center;
@@ -268,7 +279,8 @@ nav a:hover{
 
 /* CONTENEDOR PRINCIPAL */
 #contact {
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('assets/webp/grupo-de-gente-bailando-en-discoteca.webp');
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6))
+  , url('assets/fotosLocalEditadas/10.editcolor.webp');
   background-size: cover;
   background-position: center;
   padding: 40px 0;
@@ -510,7 +522,7 @@ footer .copy p{
 
     #hero img {
         max-width: 250px;
-        padding-bottom: 0px;
+        padding-bottom: 40px;
       }
 
     /*SECCIÓN SOMOS*/
