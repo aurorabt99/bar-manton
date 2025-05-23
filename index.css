@@ -43,6 +43,7 @@ h2{ font-size: 3.2em;
     font-weight: 500;
     letter-spacing: 0.03em; /*en somos manton, el manton seria kumbh*/
 }
+h4{font-size: 2em;}
 h5{ font-size: 1.30em;}
 p{ font-size: 1.25em;}
 
@@ -78,6 +79,20 @@ nav a:hover{
     transform: scale(1.1); /*zoom*/
 }
 
+nav button{
+  background: var(--color_rosa);
+  border: none;
+  color: white;
+  padding: 12px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.2s;
+}
+
+nav button:hover{
+    background-color: var(--color_rojo);
+}
+
 .logo{
     flex: 1;
 }
@@ -94,8 +109,8 @@ nav a:hover{
 }
 
 .menu li{
-    padding: 15px 10px; /*mirar el espaciado en el nav*/
-    font-size: 1.25em; /*NAV comprobar tamaño de nuevo*/
+    padding: 15px 10px; 
+    font-size: 1.25em; 
 }
 
 .toggle{
@@ -162,7 +177,7 @@ nav a:hover{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 65vh;
+    height: 120vh;
     /*fondo*/
     background-image: linear-gradient(
         0deg,
@@ -173,14 +188,14 @@ nav a:hover{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 40% 23%;
-    clip-path: polygon(50% 20%, 70% 0, 100% 0, 100% 100%, 0 100%, 0 0, 30% 0);
+    clip-path: polygon(50% 13%, 70% 0, 100% 0, 100% 100%, 0 100%, 0 0, 30% 0);
 }
 
 #bar-de-copas .container{
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding-top: 70px;
+    padding-top: 90px;
     gap: 20px;
 }
 
@@ -190,6 +205,45 @@ nav a:hover{
 
 #bar-de-copas img{  /*icono abanico*/
     width: 150px;
+}
+
+#bar-de-copas .carta{
+  margin: 15px;
+  margin-top: 35px;
+}
+
+#bar-de-copas .carta p{
+  text-align: center;
+  margin: 45px;
+}
+
+#bar-de-copas .titulo-carta, 
+#bar-de-copas .boton-carta{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 50px;
+}
+
+#bar-de-copas .titulo-carta img, 
+#bar-de-copas .boton-carta img{
+  flex-grow: 1;
+  max-width: 300px;
+}
+
+#bar-de-copas button{
+  background: var(--color_rosa);
+  border: none;
+  color: white;
+  padding: 12px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.2s;
+}
+
+#bar-de-copas button:hover{
+    background-color: var(--color_rojo);
 }
 
 /*CARRUSEL DE FOTOS*/
@@ -500,6 +554,10 @@ footer .copy p{
         text-align: center;
     }
 
+    .menu li a{
+      width: 100%;
+    }
+
     .toggle{
         position: absolute;
         top: 15px;
@@ -512,6 +570,22 @@ footer .copy p{
 
     nav a:hover{
         color: #fff;
+    }
+
+    nav button{
+      background: var(--color_rojo);
+      border: none;
+      color: white;
+      padding: 12px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: 0s;
+      width: 70%;
+    }
+
+    .menu li button:hover {
+      background-color: transparent;
+      color: white;
     }
 
     /*HERO*/
@@ -539,20 +613,59 @@ footer .copy p{
     }
 
     #somos-manton h2{
-        line-height: 1.2em;
+      line-height: 1.2em;
     }
 
     #somos-manton .brand{
-        margin-left: -8px;
+      margin-left: -8px;
     }
 
     #somos-manton .img-container{
-        display: none;
+      display: none;
     }
 
+    /*BAR DE COPAS*/
     #bar-de-copas{
-        height: 85vh;
-        clip-path: polygon(100% 100%, 100% 0, 50% 7%, 0 0, 0 100%);
+      height: 90vh;
+      clip-path: polygon(100% 100%, 100% 0, 50% 7%, 0 0, 0 100%);
+    }
+
+    #bar-de-copas .container{
+      padding-top: 20px;
+      gap: 20px;
+    }
+
+    #bar-de-copas h1{
+      font-size: 2.6em;
+    }
+
+    #bar-de-copas .text-bar{
+        text-align: center;
+    }
+
+    #bar-de-copas img{  /*icono abanico*/
+        width: 100px;
+    }
+
+    #bar-de-copas .carta{
+      margin-top: 10px;
+    }
+    #bar-de-copas h4{
+      font-size: 1.9em;
+    }
+
+    #bar-de-copas .carta p{
+      margin: 35px;
+    }
+    
+    #bar-de-copas .titulo-carta,
+    #bar-de-copas .boton-carta{
+      gap: 15px;
+    }
+
+    #bar-de-copas .titulo-carta img, 
+    #bar-de-copas .boton-carta img{
+      max-width: 70px;
     }
 
     /*CARRUSEL*/
